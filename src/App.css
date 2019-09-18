@@ -45,3 +45,91 @@
 #nextGameButton {
   margin: 0 5px 0 10px;
 }
+
+#robot {
+  position: relative;
+  left: 200px;
+}
+
+#antenna {
+  width: 10px;
+  height: 20px;
+  background: red;
+  border-radius: 10px / 5px;
+  margin-left: 10px;
+}
+
+#head {
+  width: 20px;
+  height: 20px;
+  background: gray;
+  margin-left: 5px;
+}
+
+#leftEye {
+  width: 10px;
+  height: 10px;
+  background: blue;
+  border-radius: 50%;
+  float: left;
+}
+
+#rightEye {
+  width: 10px;
+  height: 10px;
+  background: blue;
+  border-radius: 50%;
+  float: right;
+}
+
+#mouth {
+  display: flex;
+  width: 20px;
+  height: 10px;
+  background: repeating-linear-gradient(
+    to right,
+    #f8f8f8,
+    #070707 10px
+  );
+  border-radius: 100px / 50px;
+}
+
+#torso {
+  /* height: 0;
+  width: 14px;
+  border-top: 30px solid #bc6;
+  border-left: 7.5px solid transparent;
+  border-right: 7.5px solid transparent;
+  border-radius: 2px 2px 10px 10px; */
+  width: 30px;
+  height: 45px;
+  background: gray;
+}
+
+#rightArm {
+  transform: rotate(30deg);
+  width: 30px;
+  height: 8px;
+  background: gray;
+  float: left;
+}
+
+#leftArm {
+  transform: rotate(330deg);
+  width: 30px;
+  height: 8px;
+  background: gray;
+}
+
+#foot {
+  /* height: 4px;
+  width: 4px;
+  background: #ccc;
+  border-radius: 4px;
+  border: 1.5px solid #999;
+  position: relative;
+  left: 11px;
+  top: -1px;
+  z-index: -1; */
+
+}

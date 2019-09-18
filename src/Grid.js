@@ -36,6 +36,7 @@ export default class Grid extends Component {
           return value
         }
       })
+      console.log(robotPosition)
       this.setState({
         board: gameBoard,
         robotIndex: robotPosition,
@@ -82,9 +83,11 @@ export default class Grid extends Component {
               <div id="rightEye"></div>
               <div id="mouth"></div>
             </div>
-            <div id="torso"></div>
-            <div id="leftArm"></div>
-            <div id="rightArm"></div>
+            <div id="body">
+              <div id="rightArm"></div>
+              <div id="torso"></div>
+              <div id="leftArm"></div>
+            </div>
             <div id="foot"></div>
           </div>
       } else if (value === 2) {
@@ -93,6 +96,7 @@ export default class Grid extends Component {
       }
       return(
         <Box
+        key={ index }
         piece={ piece }
         index={ index }
         handleClick={ this.handleClick }

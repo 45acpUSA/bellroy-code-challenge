@@ -16,7 +16,7 @@ export default class Grid extends Component {
       robotIndex: 0,
       batteryIndex: 0,
       direction: "down",
-      display:
+      orientation:
         <div id="robot">
           <div id="antenna"></div>
           <div id="headUpDown">
@@ -74,7 +74,7 @@ export default class Grid extends Component {
       robotIndex: 0,
       batteryIndex: 0,
       direction: "down",
-      display:
+      orientation:
         <div id="robot">
           <div id="antenna"></div>
           <div id="headUpDown">
@@ -110,7 +110,7 @@ export default class Grid extends Component {
     } else if (direction === "down" || direction === "left" || direction === "right") {
       this.setState({
         direction: "up",
-        display:
+        orientation:
           <div id="robot">
             <div id="antenna"></div>
             <div id="headUpDown"></div>
@@ -141,7 +141,7 @@ export default class Grid extends Component {
     } else if (direction === "up" || direction === "left" || direction === "right") {
       this.setState({
         direction: "down",
-        display:
+        orientation:
           <div id="robot">
             <div id="antenna"></div>
             <div id="headUpDown">
@@ -163,7 +163,7 @@ export default class Grid extends Component {
   handleLeftArrow = () => {
     const { board, direction, robotIndex, batteryIndex } = this.state
     let robotPosition
-    if (direction === "left" && /[^05]/.test(robotIndex)) {
+    if (direction === "left" && /[05]/.test(robotIndex) === false) {
       robotPosition = robotIndex - 1
       let updatedBoard = board.map((value, index) => {
         if (index === robotPosition) {
@@ -176,7 +176,7 @@ export default class Grid extends Component {
     } else if (direction === "up" || direction === "down" || direction === "right") {
       this.setState({
         direction: "left",
-        display:
+        orientation:
           <div id="robot">
             <div id="antenna"></div>
             <div id="headLeftRight"></div>
@@ -194,7 +194,7 @@ export default class Grid extends Component {
   handleRightArrow = () => {
     const { board, direction, robotIndex, batteryIndex } = this.state
     let robotPosition
-    if (direction === "right" && /[^49]/.test(robotIndex)) {
+    if (direction === "right" && /[49]/.test(robotIndex) === false) {
       robotPosition = robotIndex + 1
       let updatedBoard = board.map((value, index) => {
         if (index === robotPosition) {
@@ -207,7 +207,7 @@ export default class Grid extends Component {
     } else if (direction === "up" || direction === "down" || direction === "left") {
       this.setState({
         direction: "right",
-        display:
+        orientation:
           <div id="robot">
             <div id="antennaRight"></div>
             <div id="headLeftRight"></div>
@@ -226,7 +226,7 @@ export default class Grid extends Component {
     const { robotIndex, batteryIndex } = this.state
     if (robotIndex === batteryIndex) {
       this.setState({
-        display:
+        orientation:
           <div id="win">
             <img src={require("./battery.png")} alt="battery" className="img-responsive" id="battery"/>
             <div id="robot">
@@ -250,7 +250,7 @@ export default class Grid extends Component {
   }
 
   render(){
-    const { board, display } = this.state
+    const { board, orientation } = this.state
     ArrowKeysReact.config({
       left: () => {
         this.handleLeftArrow()
@@ -268,7 +268,7 @@ export default class Grid extends Component {
     const grid = board.map((value, index) => {
       let piece
       if (value === 1) {
-        piece = display
+        piece = orientation
       } else if (value === 2) {
         piece =
           <img src={require("./battery.png")} alt="battery" className="img-responsive"/>

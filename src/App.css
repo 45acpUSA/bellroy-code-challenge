@@ -51,11 +51,21 @@
 }
 
 #antenna {
+  display: inline-block;
   width: 5px;
   height: 7px;
   background: red;
   border-radius: 10px / 5px;
-  margin-left: 43px;
+  top: 20px;
+}
+
+#antennaRight {
+  width: 5px;
+  height: 7px;
+  background: red;
+  border-radius: 10px / 5px;
+  display: inline-block;
+  margin-left: 25px;
 }
 
 #headUpDown {
@@ -63,6 +73,15 @@
   height: 20px;
   background: gray;
   margin-left: 35px;
+  border-bottom: 1px solid black;
+}
+
+#headLeftRight {
+  width: 20px;
+  height: 20px;
+  background: gray;
+  margin-left: 15px;
+  border-bottom: 1px solid black;
 }
 
 #leftEyeDown {
@@ -93,7 +112,7 @@
     border-radius: 100px / 50px;
   }
   
-#bodyUpDown {
+#bodyUpDown, #bodyLeftRight {
   display: flex;
 }
   
@@ -103,48 +122,14 @@
   height: 45px;
   background: gray;
 }
-  
-/* #arrowContainer {
-  position: absolute;
-  transform: translate(-50%,-50%);
-  transform: rotate(-90deg);
-  width: 20px;
-  height: 7px;
-  top: 50%;
-  right: 64%;
-}
-  
-#arrow {
-  position: relative;
-  top: 25px;
-  width: 100%;
-  height: 3px;
-  background-color: red;
-  box-shadow: 0 3px 5px rgba(0, 0, 0, .2);
-}
-  
-#arrow::after {
-  content: '';
-  position: absolute;
-  width: 60%;
-  height: 3px;
-  top: -3px;
-  right: -4px;
-  background-color: red;
-  transform: rotate(45deg);
-}
 
-#arrow::before {
-  content: '';
-  position: absolute;
-  width: 60%;
-  height: 3px;
-  top: 3px;
-  right: -4px;
-  background-color: red;
-  box-shadow: 0 3px 5px rgba(0, 0, 0, .2);
-  transform: rotate(-45deg);
-} */
+#torsoLeftRight {
+  display: inline-block;
+  width: 20px;
+  height: 45px;
+  background: gray;
+  margin-left: 15px;
+}
 
 #rightArmUpDown {
   display: inline-block;
@@ -153,6 +138,28 @@
   height: 8px;
   background: gray;
   margin-top: 12px;
+}
+
+#rightArmRight {
+  width: 30px;
+  height: 8px;
+  background: gray;
+  transform: rotate(50deg);
+  display: inline-block;
+  position: absolute;
+  margin-top: 20px;
+  margin-left: 20px;
+}
+
+#rightArmLeft {
+  width: 30px;
+  height: 8px;
+  background: gray;
+  transform: rotate(310deg);
+  display: inline-block;
+  position: absolute;
+  margin-top: 20px;
+  margin-right: 20px;
 }
 
 #leftArmUpDown {
@@ -164,7 +171,29 @@
   margin-top: 12px;
 }
 
-#gravitationRingUpDown {
+#leftArmRight {
+  width: 30px;
+  height: 8px;
+  background: gray;
+  transform: rotate(50deg);
+  display: inline-block;
+  position: absolute;
+  margin-top: 20px;
+  margin-left: 20px;
+}
+
+#leftArmLeft {
+  width: 30px;
+  height: 8px;
+  background: gray;
+  transform: rotate(310deg);
+  display: inline-block;
+  position: absolute;
+  margin-top: 20px;
+  margin-right: 20px;
+}
+
+#gravitationRing {
   display: inline-block;
   width: 10px;
   height: 10px;

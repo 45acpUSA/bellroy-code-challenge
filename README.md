@@ -1,68 +1,9 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+#Bellroy Robot Challenge
 
-## Available Scripts
+Thank you for taking the time to check out what I was able to put together for this challenge! This was a fun way for me to solidify my skills as well as pick up a few more. I tried to make this basic game more engaging by adding an objective.
 
-In the project directory, you can run:
+##Icebox
 
-### `npm start`
+If I had more time to work on this project I would make the win condition more complicated. This first step to improve the game would be to set a minimum number of moves and in order to win you would have to get to the battery within that set number. The second step would be to hide the battery and include some sort of hint component (like Minesweeper) so the user would have to strategize which move to make in order to get to the battery in the set number of moves. This was not implemented because I was unable to quickly come up with a dynamic programming solution in order to find the minimum number of moves (I prefer dynamic programming to keep code cleaner and easier to maintain). My solution would be to create a matrix from this array (an array with nested arrays) which would make finding the route a lot easier because I can take the difference between the length of each array to get the horizontal moves [j], and the difference between which array they pieces are located [i]. Although this would increase time complexity to O(n^2), I am unable to figure out a simple mathematical solution to get this condition with a single array.
 
-Runs the app in the development mode.<br>
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
-
-The page will reload if you make edits.<br>
-You will also see any lint errors in the console.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.<br>
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.<br>
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.<br>
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (Webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
-
-### Analyzing the Bundle Size
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `npm run build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+As you know, the possibilities are endless when building a game like this. I hope you enjoyed this basic game and again I appreciate your consideration for this position!

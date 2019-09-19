@@ -29,7 +29,7 @@ export default class Grid extends Component {
             <div id="torsoUpDown"></div>
             <div id="leftArmUpDown"></div>
           </div>
-          <div id="gravitationRingUpDown"></div>
+          <div id="gravitationRing"></div>
         </div>,
       success: false,
     }
@@ -111,7 +111,7 @@ export default class Grid extends Component {
               <div id="torsoUpDown"></div>
               <div id="leftArmUpDown"></div>
             </div>
-            <div id="gravitationRingUpDown"></div>
+            <div id="gravitationRing"></div>
           </div>
       })
     }
@@ -146,7 +146,7 @@ export default class Grid extends Component {
               <div id="torsoUpDown"></div>
               <div id="leftArmUpDown"></div>
             </div>
-            <div id="gravitationRingUpDown"></div>
+            <div id="gravitationRing"></div>
           </div>
       })
     }
@@ -173,11 +173,11 @@ export default class Grid extends Component {
             <div id="antenna"></div>
             <div id="headLeftRight"></div>
             <div id="bodyLeftRight">
-              <div id="rightArmLeftRight"></div>
+              <div id="rightArmLeft"></div>
               <div id="torsoLeftRight"></div>
-              <div id="leftArmLeftRight"></div>
+              <div id="leftArmLeft"></div>
             </div>
-            <div id="gravitationRingLeftRight"></div>
+            <div id="gravitationRing"></div>
           </div>
       })
     }
@@ -201,16 +201,45 @@ export default class Grid extends Component {
         direction: "right",
         display:
           <div id="robot">
-            <div id="antenna"></div>
+            <div id="antennaRight"></div>
             <div id="headLeftRight"></div>
             <div id="bodyLeftRight">
-              <div id="rightArmLeftRight"></div>
+              <div id="rightArmRight"></div>
               <div id="torsoLeftRight"></div>
-              <div id="leftArmLeftRight"></div>
+              <div id="leftArmRight"></div>
             </div>
-            <div id="gravitationRingLeftRight"></div>
+            <div id="gravitationRing"></div>
           </div>
       })
+    }
+  }
+
+  //figure out where to call this function
+  checkWinCondition = () => {
+    const { robotIndex, batteryIndex } = this.state
+    if (robotIndex === batteryIndex) {
+      this.setState({
+        display:
+          <div id="win">
+            <img src={require("./battery.png")} alt="battery" className="img-responsive"/>
+            <div id="robot">
+              <div id="antenna"></div>
+              <div id="headUpDown">
+                <div id="leftEyeDown"></div>
+                <div id="rightEyeDown"></div>
+                <div id="mouthDown"></div>
+              </div>
+              <div id="bodyUpDown">
+                <div id="rightArmWin"></div>
+                <div id="torsoUpDown"></div>
+                <div id="leftArmWin"></div>
+              </div>
+              <div id="gravitationRing"></div>
+            </div>
+          </div>,
+          success: true
+      })
+      alert("Nice job!")
     }
   }
 

@@ -21,7 +21,7 @@
 
 #box {
   display: flex;
-  /* justify-content: center; */
+  justify-content: center;
   text-align: center;
   align-items: center;
   font-size: 10px;
@@ -48,25 +48,24 @@
 
 #robot {
   position: relative;
-  margin-left: 2px;
 }
 
 #antenna {
-  width: 10px;
-  height: 20px;
+  width: 5px;
+  height: 7px;
   background: red;
   border-radius: 10px / 5px;
-  margin-left: 40px;
+  margin-left: 43px;
 }
 
-#head {
+#headUpDown {
   width: 20px;
   height: 20px;
   background: gray;
   margin-left: 35px;
 }
 
-#leftEye {
+#leftEyeDown {
   width: 10px;
   height: 10px;
   background: blue;
@@ -74,7 +73,7 @@
   float: left;
 }
 
-#rightEye {
+#rightEyeDown {
   width: 10px;
   height: 10px;
   background: blue;
@@ -82,7 +81,7 @@
   float: right;
 }
 
-#mouth {
+#mouthDown {
   display: flex;
   width: 20px;
   height: 10px;
@@ -90,28 +89,64 @@
     to right,
     #f8f8f8,
     #070707 10px
-  );
-  border-radius: 100px / 50px;
-}
-
-#body {
+    );
+    border-radius: 100px / 50px;
+  }
+  
+#bodyUpDown {
   display: flex;
 }
-
-#torso {
-  /* height: 0;
-  width: 14px;
-  border-top: 30px solid #bc6;
-  border-left: 7.5px solid transparent;
-  border-right: 7.5px solid transparent;
-  border-radius: 2px 2px 10px 10px; */
+  
+#torsoUpDown {
   display: inline-block;
   width: 30px;
   height: 45px;
   background: gray;
 }
+  
+/* #arrowContainer {
+  position: absolute;
+  transform: translate(-50%,-50%);
+  transform: rotate(-90deg);
+  width: 20px;
+  height: 7px;
+  top: 50%;
+  right: 64%;
+}
+  
+#arrow {
+  position: relative;
+  top: 25px;
+  width: 100%;
+  height: 3px;
+  background-color: red;
+  box-shadow: 0 3px 5px rgba(0, 0, 0, .2);
+}
+  
+#arrow::after {
+  content: '';
+  position: absolute;
+  width: 60%;
+  height: 3px;
+  top: -3px;
+  right: -4px;
+  background-color: red;
+  transform: rotate(45deg);
+}
 
-#rightArm {
+#arrow::before {
+  content: '';
+  position: absolute;
+  width: 60%;
+  height: 3px;
+  top: 3px;
+  right: -4px;
+  background-color: red;
+  box-shadow: 0 3px 5px rgba(0, 0, 0, .2);
+  transform: rotate(-45deg);
+} */
+
+#rightArmUpDown {
   display: inline-block;
   transform: rotate(330deg);
   width: 30px;
@@ -120,7 +155,7 @@
   margin-top: 12px;
 }
 
-#leftArm {
+#leftArmUpDown {
   display: inline-block;
   transform: rotate(30deg);
   width: 30px;
@@ -129,15 +164,34 @@
   margin-top: 12px;
 }
 
-#foot {
-  height: 4px;
-  width: 4px;
-  background: #ccc;
-  border-radius: 4px;
-  border: 1.5px solid #999;
-  position: relative;
-  left: 11px;
-  top: -1px;
-  z-index: -1;
-
+#gravitationRingUpDown {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  border: 2px solid rgb(185, 183, 183);
+  border-radius: 50%;
+  animation: gravitate 1s linear infinite;
+}
+  
+@keyframes gravitate {
+  100% {
+    width: 100%;
+    height: 100%;
+  }
+  75% {
+    width: 75%;
+    height: 75%;
+  }
+  50% {
+    width: 50%;
+    height: 50%;
+  }
+  25% {
+    width: 25%;
+    height: 25%;
+  }
+  0% {
+    width: 0%;
+    height: 0%;
+  }
 }

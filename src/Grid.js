@@ -56,42 +56,37 @@ export default class Grid extends Component {
         board: gameBoard,
         robotIndex: robotPosition,
         batteryIndex: batteryPosition,
-        success: false,
       })
     }
   }
 
   handleReset = () => {
-    const { robotIndex, batteryIndex } = this.state
-    if (robotIndex !== 0 || batteryIndex !== 0) {
-      this.setState({
-        board:
-        [0, 0, 0, 0, 0,
-         0, 0, 0, 0, 0,
-         0, 0, 0, 0, 0,
-         0, 0, 0, 0, 0,
-         0, 0, 0, 0, 0],
-      robotIndex: 0,
-      batteryIndex: 0,
-      direction: "down",
-      orientation:
-        <div id="robot">
-          <div id="antenna"></div>
-          <div id="headUpDown">
-            <div id="leftEyeDown"></div>
-            <div id="rightEyeDown"></div>
-            <div id="mouthDown"></div>
-          </div>
-          <div id="bodyUpDown">
-            <div id="rightArmUpDown"></div>
-            <div id="torsoUpDown"></div>
-            <div id="leftArmUpDown"></div>
-          </div>
-          <div id="gravitationRing"></div>
-        </div>,
-      success: false,
-      })
-    }
+    this.setState({
+      board:
+      [0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0],
+    robotIndex: 0,
+    batteryIndex: 0,
+    direction: "down",
+    orientation:
+      <div id="robot">
+        <div id="antenna"></div>
+        <div id="headUpDown">
+          <div id="leftEyeDown"></div>
+          <div id="rightEyeDown"></div>
+          <div id="mouthDown"></div>
+        </div>
+        <div id="bodyUpDown">
+          <div id="rightArmUpDown"></div>
+          <div id="torsoUpDown"></div>
+          <div id="leftArmUpDown"></div>
+        </div>
+        <div id="gravitationRing"></div>
+      </div>
+    })
   }
 
   handleUpArrow = () => {

@@ -6,6 +6,10 @@
   text-align: center;
 }
 
+#textbox {
+  text-align: center;
+}
+
 #grid {
   display: flex;
   flex-direction: row;
@@ -17,6 +21,7 @@
   height: 500px;
   width: 500px;
   margin: auto;
+  background-image: url("metallicBackground.jpg");
 }
 
 #box {
@@ -71,7 +76,7 @@
 #headUpDown {
   width: 20px;
   height: 20px;
-  background: gray;
+  background: steelblue;
   margin-left: 35px;
   border-bottom: 1px solid black;
 }
@@ -79,7 +84,7 @@
 #headLeftRight {
   width: 20px;
   height: 20px;
-  background: gray;
+  background: steelblue;
   margin-left: 15px;
   border-bottom: 1px solid black;
 }
@@ -87,7 +92,7 @@
 #leftEyeDown {
   width: 10px;
   height: 10px;
-  background: blue;
+  background: white;
   border-radius: 50%;
   float: left;
 }
@@ -95,7 +100,7 @@
 #rightEyeDown {
   width: 10px;
   height: 10px;
-  background: blue;
+  background: white;
   border-radius: 50%;
   float: right;
 }
@@ -120,14 +125,14 @@
   display: inline-block;
   width: 30px;
   height: 45px;
-  background: gray;
+  background: steelblue;
 }
 
 #torsoLeftRight {
   display: inline-block;
   width: 20px;
   height: 45px;
-  background: gray;
+  background: steelblue;
   margin-left: 15px;
 }
 
@@ -136,14 +141,14 @@
   transform: rotate(330deg);
   width: 30px;
   height: 8px;
-  background: gray;
+  background: steelblue;
   margin-top: 12px;
 }
 
 #rightArmRight {
   width: 30px;
   height: 8px;
-  background: gray;
+  background: steelblue;
   transform: rotate(50deg);
   display: inline-block;
   position: absolute;
@@ -154,7 +159,7 @@
 #rightArmLeft {
   width: 30px;
   height: 8px;
-  background: gray;
+  background: steelblue;
   transform: rotate(310deg);
   display: inline-block;
   position: absolute;
@@ -167,7 +172,7 @@
   transform: rotate(60deg);
   width: 30px;
   height: 8px;
-  background: gray;
+  background: steelblue;
   margin-top: 2px;
 }
 
@@ -176,14 +181,14 @@
   transform: rotate(30deg);
   width: 30px;
   height: 8px;
-  background: gray;
+  background: steelblue;
   margin-top: 12px;
 }
 
 #leftArmRight {
   width: 30px;
   height: 8px;
-  background: gray;
+  background: steelblue;
   transform: rotate(50deg);
   display: inline-block;
   position: absolute;
@@ -194,7 +199,7 @@
 #leftArmLeft {
   width: 30px;
   height: 8px;
-  background: gray;
+  background: steelblue;
   transform: rotate(310deg);
   display: inline-block;
   position: absolute;
@@ -207,7 +212,7 @@
   transform: rotate(300deg);
   width: 30px;
   height: 8px;
-  background: gray;
+  background: steelblue;
   margin-top: 2px;
 }
 
@@ -215,7 +220,7 @@
   display: inline-block;
   width: 10px;
   height: 10px;
-  border: 2px solid rgb(185, 183, 183);
+  border: 2px solid white;
   border-radius: 50%;
   animation: gravitate 1s linear infinite;
 }

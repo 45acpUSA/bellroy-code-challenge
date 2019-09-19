@@ -1,0 +1,9 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Grid should put pieces on the board when Start button is clicked 1`] = `ReactWrapper {}`;
+
+exports[`Grid should remove pieces from the board when Reset button is clicked 1`] = `ReactWrapper {}`;
+
+exports[`Grid should render correctly in "debug" mode 1`] = `ShallowWrapper {}`;
+
+exports[`should remove pieces from the board when Reset button is clicked 1`] = `ReactWrapper {}`;

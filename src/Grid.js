@@ -63,29 +63,29 @@ export default class Grid extends Component {
   handleReset = () => {
     this.setState({
       board:
-      [0, 0, 0, 0, 0,
-        0, 0, 0, 0, 0,
-        0, 0, 0, 0, 0,
-        0, 0, 0, 0, 0,
-        0, 0, 0, 0, 0],
-    robotIndex: 0,
-    batteryIndex: 0,
-    direction: "down",
-    orientation:
-      <div id="robot">
-        <div id="antenna"></div>
-        <div id="headUpDown">
-          <div id="leftEyeDown"></div>
-          <div id="rightEyeDown"></div>
-          <div id="mouthDown"></div>
+        [0, 0, 0, 0, 0,
+         0, 0, 0, 0, 0,
+         0, 0, 0, 0, 0,
+         0, 0, 0, 0, 0,
+         0, 0, 0, 0, 0],
+      robotIndex: 0,
+      batteryIndex: 0,
+      direction: "down",
+      orientation:
+        <div id="robot">
+          <div id="antenna"></div>
+          <div id="headUpDown">
+            <div id="leftEyeDown"></div>
+            <div id="rightEyeDown"></div>
+            <div id="mouthDown"></div>
+          </div>
+          <div id="bodyUpDown">
+            <div id="rightArmUpDown"></div>
+            <div id="torsoUpDown"></div>
+            <div id="leftArmUpDown"></div>
+          </div>
+          <div id="gravitationRing"></div>
         </div>
-        <div id="bodyUpDown">
-          <div id="rightArmUpDown"></div>
-          <div id="torsoUpDown"></div>
-          <div id="leftArmUpDown"></div>
-        </div>
-        <div id="gravitationRing"></div>
-      </div>
     })
   }
 
@@ -223,7 +223,7 @@ export default class Grid extends Component {
       this.setState({
         orientation:
           <div id="win">
-            <img src={require("./battery.png")} alt="battery" className="img-responsive" id="battery"/>
+            <img src={require("./images/battery.png")} alt="battery" className="img-responsive" id="battery"/>
             <div id="robot">
               <div id="antenna"></div>
               <div id="headUpDown">
@@ -266,7 +266,7 @@ export default class Grid extends Component {
         piece = orientation
       } else if (value === 2) {
         piece =
-          <img src={require("./battery.png")} alt="battery" className="img-responsive"/>
+          <img src={require("./images/battery.png")} alt="battery" className="img-responsive"/>
       }
       return(
         <Box

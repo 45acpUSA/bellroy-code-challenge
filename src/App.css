@@ -21,7 +21,7 @@
   height: 500px;
   width: 500px;
   margin: auto;
-  background-image: url("metallicBackground.jpg");
+  background-image: url("./images/metallicBackground.jpg");
 }
 
 #box {

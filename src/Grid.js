@@ -30,8 +30,7 @@ export default class Grid extends Component {
             <div id="leftArmUpDown"></div>
           </div>
           <div id="gravitationRing"></div>
-        </div>,
-      success: false,
+        </div>
     }
   }
 
@@ -57,6 +56,7 @@ export default class Grid extends Component {
         board: gameBoard,
         robotIndex: robotPosition,
         batteryIndex: batteryPosition,
+        success: false,
       })
     }
   }
@@ -73,16 +73,24 @@ export default class Grid extends Component {
          0, 0, 0, 0, 0],
       robotIndex: 0,
       batteryIndex: 0,
+      direction: "down",
+      display:
+        <div id="robot">
+          <div id="antenna"></div>
+          <div id="headUpDown">
+            <div id="leftEyeDown"></div>
+            <div id="rightEyeDown"></div>
+            <div id="mouthDown"></div>
+          </div>
+          <div id="bodyUpDown">
+            <div id="rightArmUpDown"></div>
+            <div id="torsoUpDown"></div>
+            <div id="leftArmUpDown"></div>
+          </div>
+          <div id="gravitationRing"></div>
+        </div>,
       success: false,
       })
-    }
-  }
-
-  //Check functionality after completing win condition
-  handleNextGame = () => {
-    const { success } = this.state
-    if (success) {
-      this.handleStart()
     }
   }
 
@@ -214,14 +222,13 @@ export default class Grid extends Component {
     }
   }
 
-  //figure out where to call this function
   checkWinCondition = () => {
     const { robotIndex, batteryIndex } = this.state
     if (robotIndex === batteryIndex) {
       this.setState({
         display:
           <div id="win">
-            <img src={require("./battery.png")} alt="battery" className="img-responsive"/>
+            <img src={require("./battery.png")} alt="battery" className="img-responsive" id="battery"/>
             <div id="robot">
               <div id="antenna"></div>
               <div id="headUpDown">
@@ -236,8 +243,7 @@ export default class Grid extends Component {
               </div>
               <div id="gravitationRing"></div>
             </div>
-          </div>,
-          success: true
+          </div>
       })
       alert("Nice job!")
     }
@@ -280,7 +286,7 @@ export default class Grid extends Component {
 
     return(
       <div>
-        <div id="grid" {...ArrowKeysReact.events} tabIndex="1">
+        <div id="grid" {...ArrowKeysReact.events} tabIndex="1" onKeyUp={ this.checkWinCondition }>
           { grid }
         </div>
         <br />
@@ -289,7 +295,6 @@ export default class Grid extends Component {
             <div className="col-md">
               <button type="button" className="btn btn-primary" onClick={ this.handleStart } id="startButton">Start</button>
               <button type="button" className="btn btn-danger" onClick={ this.handleReset } id="resetButton">Reset</button>
-              <button type="button" className="btn btn-success" onClick={ this.handleNextGame } id="nextGameButton">Next Game</button>
             </div>
           </div>
         </div>

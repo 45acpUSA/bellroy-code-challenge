@@ -162,6 +162,15 @@
   margin-right: 20px;
 }
 
+#rightArmWin {
+  display: inline-block;
+  transform: rotate(60deg);
+  width: 30px;
+  height: 8px;
+  background: gray;
+  margin-top: 2px;
+}
+
 #leftArmUpDown {
   display: inline-block;
   transform: rotate(30deg);
@@ -191,6 +200,15 @@
   position: absolute;
   margin-top: 20px;
   margin-right: 20px;
+}
+
+#leftArmWin {
+  display: inline-block;
+  transform: rotate(300deg);
+  width: 30px;
+  height: 8px;
+  background: gray;
+  margin-top: 2px;
 }
 
 #gravitationRing {
@@ -223,4 +241,9 @@
     width: 0%;
     height: 0%;
   }
+}
+
+#battery {
+  height: 50%;
+  width: 50%;
 }

@@ -266,7 +266,7 @@ export default class Grid extends Component {
         piece = orientation
       } else if (value === 2) {
         piece =
-          <img src={require("./images/battery.png")} alt="battery" className="img-responsive"/>
+          <img src={require("./images/battery.png")} alt="battery" className="img-responsive" id="battery"/>
       }
       return(
         <Box

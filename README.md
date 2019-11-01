@@ -1,6 +1,6 @@
 # Bellroy Robot Challenge
 
-Thank you for taking the time to check out what I was able to put together for this challenge! Rather than creating a simple 5x5 grid with a walking and rotating robot, I decided to create a game with a simple objective in order to make it more interactive. The robot was drawn from scratch using CSS and I am not a designer so please excuse its primitive nature!
+Originally a code challenge for the company, Bellroy, I am using this to showcase React grid formation, key press events and CSS styling. If you look through my page you'll find other games I've built with React, but the CSS sets this game apart. The robot was hand-designed with CSS, which was a stretch at the time as I am not a designer and do not claim to have any artistic abilities. The biggest takeaway from this challenge was my growth in CSS and styling in general. Below is what I would have done given more time and the motivation to make this into an actual game with a strategic aspect.
 
 ## Icebox
 
